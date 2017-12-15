@@ -9,7 +9,9 @@ import { AppComponent } from '../app.component';
 })
 export class NavbarComponent implements OnInit {
   logueado: boolean;
-
+  listMenu = [
+    { Nombre: 'Home', Router: 'main' },
+    { Nombre: 'Nueva Nota', Router: 'NuevaNota'}];
   constructor(private tokenService: TokenService) {
     tokenService.onLoguin.subscribe((value) => {
       this.logueado = value;
@@ -19,9 +21,7 @@ export class NavbarComponent implements OnInit {
 
   changeUserStatus() {
     if (this.logueado) {
-        
     }else {
-
     }
   }
 

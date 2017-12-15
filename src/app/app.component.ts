@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   }
   changeUserStatus() {
     if (this.logueado) {
-
+      
     }else {
 
     }
