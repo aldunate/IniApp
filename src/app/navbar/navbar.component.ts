@@ -11,7 +11,9 @@ export class NavbarComponent implements OnInit {
   logueado: boolean;
   listMenu = [
     { Nombre: 'Home', Router: 'main' },
-    { Nombre: 'Nueva Nota', Router: 'NuevaNota'}];
+    { Nombre: 'Nueva Nota', Router: 'nueva-nota'},
+    { Nombre: 'Notas', Router: 'notas'}
+  ];
   constructor(private tokenService: TokenService) {
     tokenService.onLoguin.subscribe((value) => {
       this.logueado = value;

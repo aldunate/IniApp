@@ -16,6 +16,9 @@ import { TokenInterceptor } from './usuario/service/token.interceptor';
 import { AuthService } from './usuario/service/auth.service';
 import { TokenService } from './usuario/service/token.service';
 import { BackendInterceptor } from './util/service/mockBackend.interceptor';
+import { NuevaNotaComponent } from './notas/nueva-nota/nueva-nota.component';
+import { NotasComponent } from './notas/notas/notas.component';
+import { NotasService } from './notas/service/notas.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { BackendInterceptor } from './util/service/mockBackend.interceptor';
     RegistroComponent,
     MainComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    NuevaNotaComponent,
+    NotasComponent
   ],
   imports: [BrowserModule, HttpClientModule, FormsModule, Route],
   providers: [UsuarioService, {
@@ -35,6 +40,7 @@ import { BackendInterceptor } from './util/service/mockBackend.interceptor';
     useClass: BackendInterceptor,
     multi: true
   }, BackendInterceptor,
+  NotasService
 ],
   bootstrap: [AppComponent]
 })

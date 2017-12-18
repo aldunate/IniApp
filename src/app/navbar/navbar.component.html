@@ -8,26 +8,26 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-            <ul id="ulCentro" class="nav navbar-nav"  *ngFor="let item of listMenu">
-                <li>
-                    <a [routerLink]="item.Router" >
-                        <div class="divArriba"></div>
-                        <div> {{item.Nombre}} </div>
-                    </a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul id="ulCentro" class="nav navbar-nav">
+                
+                    <li *ngFor="let item of listMenu">
+                        <a [routerLink]="item.Router" >
+                            <div class="divArriba"></div>
+                            <div> {{item.Nombre}} </div>
+                        </a>
+                    </li>
+                
                 <li *ngIf="!logueado">
                     <a routerLink="registro">
-                        <span class="glyphicon glyphicon-user"></span> Registrarse</a>
+                        <span class=""></span> Registrarse</a>
                 </li>
                 <li *ngIf="!logueado">
                     <a routerLink="login">
-                        <span class="glyphicon glyphicon-log-in"></span>Entrar</a>
+                        <span class=""></span>Entrar</a>
                 </li>
                 <li *ngIf="logueado">
                     <a routerLink="main" type="button" (click)="logout()" >
-                        <span class="glyphicon glyphicon-log-in"></span>Cerrar sesión</a>
+                        <span class=""></span>Cerrar sesión</a>
                 </li>
             </ul>
         </div>

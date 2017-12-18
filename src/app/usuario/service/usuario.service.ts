@@ -11,10 +11,12 @@ import { ResponseType } from '@angular/http/src/enums';
 @Injectable()
 export class UsuarioService {
 
+
   public id: string;
   public nombre: string;
 
-  constructor(private http: HttpClient, private tokenInterceptor: TokenInterceptor
+  constructor(private http: HttpClient,
+    private tokenInterceptor: TokenInterceptor
     , private backendInterceptor: BackendInterceptor) { }
 
   login(usuario, password, respuesta) {
